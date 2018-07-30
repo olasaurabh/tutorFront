@@ -1,0 +1,737 @@
+<form [formGroup]="tutorDetailsForm" (ngSubmit)="onFormSubmit()">
+  <mat-card class="formCard">
+    <mat-card-header>
+      <mat-card-title>Personal Information</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="First Name" formControlName="firstName">
+          </mat-form-field>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Last Name" formControlName="lastName">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <mat-select placeholder="Gender" formControlName="gender">
+              <mat-option *ngFor="let gender of genders" [value]="gender">
+                {{gender}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Email Id" disabled formControlName="emailId">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+          </mat-form-field>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+
+
+          <mat-form-field class="width88">
+            <input matInput placeholder="Whatsapp Number" formControlName="whatsappNumber">
+            <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="copyPhoneNumber()">
+                <mat-icon>file_copy</mat-icon>
+              </button>
+              <mat-hint>Click icon to copy phone number</mat-hint>
+          </mat-form-field>
+
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class="formCard">
+    <mat-card-header>
+      <mat-card-title>Academic Information</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="College Name" formControlName="collegeName">
+          </mat-form-field>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Degree" formControlName="degree">
+            <mat-hint align="start">Ex: Bachelor of Technology (B.Tech)</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Department of Study" formControlName="departmentOfStudy">
+            <mat-hint align="start">Ex: Mechanical Engineering</mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Current Semester" formControlName="currentSemester">
+            <mat-hint align="start">Ex: 4th</mat-hint>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="Year of Passing" formControlName="yearOfPassing">
+          </mat-form-field>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col">
+          <mat-form-field class="width88">
+            <input matInput placeholder="CGPA/ Percentage Aggregate" formControlName="cgpa">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class="formCard">
+    <mat-card-header>
+      <mat-card-title>Assessment Questions</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Choose Subjects from Software</h6>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="AlgebraJEELevel">Algebra (JEE Level)</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="TrigonometryJEELevel">Trigonometry (JEE Level)</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="MathematicsJEELevel">Mathematics (JEE Level)</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="CalculusEngineeringLevel">Calculus (Engineering Level)</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="DifferentialEquations">Differential Equations (Engineering Level)</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="LinearAlgebra">Linear Algebra (Engineering Level)</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="NumericalAnalysisMatlab">Numerical Analysis+Matlab</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Statistics">Statistics</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Probability">Probability</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="EngineeringAnalysisMatlab">Engineering Analysis+Matlab</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="DifferentialEquationsLinearAlgebra">Differential Equations & Linear Algebra</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="VBA">VBA</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="SequenceSeries">Sequence & Series</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="ComplexVariables">Complex Variables</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="DiscreteMathematics">Complex Variables</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="CalculusLinearAlgebra">Calculus & Linear Algebra</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="margintop48"></div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Choose Subjects from Software</h6>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Matlab">Matlab</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Solidworks">Solidworks</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Ansys">Ansys</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Autocad">Autocad</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Catia">Catia</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Mathcad">Mathcad</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="MSExcel">MS Excel</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="CC">C & C++</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Java">Java</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="VBASoftware">VBA</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="VisualStudio">Visual Studio</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Solidedge">Solidedge</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="MSWord">MS Word</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="MSPowerpoint">MS Powerpoint</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="EES">EES (Engineering Equation Solver)</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="margintop48"></div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Choose Subjects from Science and Other Subjects</h6>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Finance">Finance </mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Accounting">Accounting</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Economics">Economics</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="OperationManagement">Operation Management</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="English">English (Essay/Summary Writing)</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Philosophy">Philosophy</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Humanities">Humanities</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Ethics">Ethics</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Psychology">Psychology</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Physics">Physics</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="GeneralChemistry">General Chemistry</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Biology">Biology</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="ModernPhysics">Modern Physics</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="Electromagnetism">Electromagnetism</mat-checkbox>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="OrganicChemistry">Organic Chemistry</mat-checkbox>
+        </div>
+      </div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-checkbox formControlName="PhysicalChemistry">Physical Chemistry</mat-checkbox>
+        </div>
+      </div>
+
+      <div class="margintop48"></div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Choose Your Department</h6>
+        </div>
+      </div>
+
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col">
+          <mat-form-field class="width88">
+            <mat-select placeholder="Desired Departmrnt" [formControl]="departmentControl">
+              <mat-option *ngFor="let department of departments" [value]="department">
+                {{department}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="departmentSubjects">
+        <div *ngIf="chemical">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalThermodynamics">Thermodynamics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalHeatTransfer">Heat Transfer</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalFluidMechanics">Fluid Mechanics</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalMaterialScienceEngineeringMaterials">Material Science / Engineering Materials</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalDynamics">Engineering Mechanics (Dynamics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalStatics">Engineering Mechanics (Statics)</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalStaticsDynamics">Engineering Mechanics (Statics+Dynamics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="chemicalEngineeringFundamental">Engineering Fundamental</mat-checkbox>
+            </div>
+
+          </div>
+
+        </div>
+        <div *ngIf="civil">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilEngineeringDrawing">Engineering Drawing </mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilDynamics">Engineering Mechanics (Dynamics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilStatics">Engineering Mechanics (Statics)</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilStaticsDynamics">Engineering Mechanics (Statics+Dynamics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="EnvironmentalEngineering">Environmental Engineering</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilFluidMechanics">Fluid Mechanics</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="GeotechnicalEngineering">Geotechnical Engineering </mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="HydraulicEngineering">Hydraulic Engineering</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="IntroductiontoCivilEngineering">Introduction to Civil Engineering</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilMOM">Mechanics of Material (MOM / SOM / MOS)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="SoilMechanics">Soil Mechanics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="StructuralAnalysis">Structural Analysis</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="Surveying">Surveying</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="TransportationEngineering">Transportation Engineering</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="WaterResourcesEngineering">Water Resources Engineering</mat-checkbox>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilEngineeringFundamental">Engineering Fundamental</mat-checkbox>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="civilThermodynamics">Thermodynamics </mat-checkbox>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div *ngIf="electrical">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="IntroductiontoElectricalEngineering">Introduction to Electrical Engineering</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalRobotics">Robotics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalMeasurementsandInstrumentation">Measurements and Instrumentation</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="SignalsSystemsMatlab">Signals & Systems + Matlab</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="ElectricalCircuitsNetworks">Electrical Circuits & Networks</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="LogicDesignDigitalSystemDesign">Logic Design / Digital System Design</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="DigitalSignalProcessing">Digital Signal Processing</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalControlSystems">Control Systems</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="MachineLearning">Machine Learning</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalElectroMechanicalSystem">Electro Mechanical System</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="PowerSystems">Power Systems</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalThermodynamics">Thermodynamics</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalDynamics">Engineering Mechanics (Dynamics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalStatics">Engineering Mechanics (Statics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalStaticsDynamics">Engineering Mechanics (Statics+Dynamics)</mat-checkbox>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalMechatronics">Mechatronics</mat-checkbox>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="electricalEngineeringFundamental">Engineering Fundamental</mat-checkbox>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="mechanical">
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalStatics">Engineering Mechanics (Statics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalDynamics">Engineering Mechanics (Dynamics)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalStaticsDynamics">Engineering Mechanics (Statics+Dynamics)</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalFluidMechanics">Fluid Mechanics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalMaterialScienceEngineeringMaterials">Material Science / Engineering Materials</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="KinematicsofMachineryDynamicsofMachine">Kinematics of Machinery / Dynamics of Machine</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalThermodynamics">Thermodynamics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="ManufacturingScienceProcess">Manufacturing Science / Process</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalEngineeringDrawing">Engineering Drawing</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalMOM">Mechanics of Material (MOM / SOM / MOS)</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalMeasurementsandInstrumentation">Measurements and Instrumentation</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="MachineDesign">Machine Design</mat-checkbox>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="HeatTransfer">Heat Transfer</mat-checkbox>
+            </div>
+
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="DesignofMachineElements">Design of Machine Elements (DOME)</mat-checkbox>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalControlSystems">Control Systems</mat-checkbox>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="ThermoFluids">Thermo-Fluids</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="Vibrations">Vibrations</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="SystemDynamics">System Dynamics</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="ThermalDesign">Thermal Design</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="VehicleDynamics">Vehicle Dynamics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="TurboMachinery">Turbo Machinery</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="AdvanceMachineDesign">Advance Machine Design</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="ComputationalFluidDynamics">Computational Fluid Dynamics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="EngineeringFundamental">Engineering Fundamental</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="AppliedFluidMechanics">Applied Fluid Mechanics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="CompressibleFluidFlowGasDynamics">Compressible Fluid Flow / Gas Dynamics</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="IntroductiontoMechanicalEngineering">Introduction to Mechanical Engineering</mat-checkbox>
+            </div>
+          </div>
+
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="AppliedHeatTransfer">Applied Heat Transfer</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="CompositeMaterial">Composite Material</mat-checkbox>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="IndustrialEngineering">Industrial Engineering</mat-checkbox>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="AppliedThermodynamics">Applied Thermodynamics</mat-checkbox>
+            </div>
+
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalRobotics">Robotics</mat-checkbox>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalElectroMechanicalSystem">Electro Mechanical System</mat-checkbox>
+            </div>
+          </div>
+          <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="FiniteElementAnalysis">Finite Element Analysis</mat-checkbox>
+            </div>
+
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="mehanicalMechatronics">Mechatronics</mat-checkbox>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col">
+              <mat-checkbox formControlName="InternalCombustionEngine">Internal Combustion (IC) Engine</mat-checkbox>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="margintop48"></div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Why do you want to join EduFeat?</h6>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <mat-form-field class="width88">
+            <input matInput formControlName="whyEduFeat">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="margintop48"></div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Experience(if any)</h6>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <mat-form-field class="width88">
+            <input matInput formControlName="experience">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="margintop48"></div>
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+          <h6>Write any queries that you might have</h6>
+        </div>
+        <div class="mdl-cell mdl-cell--12-col">
+          <mat-form-field class="width88">
+            <input matInput formControlName="query">
+          </mat-form-field>
+        </div>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class="formCard">
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <mat-checkbox formControlName="cvCheckbox">I acknowledge that my application will be considered only when I will mail my cv to
+          <b>teamedufeat@gmail.com</b>
+        </mat-checkbox>
+
+      </div>
+    </div>
+    <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+        <button class="tutorFormSubmitButton" mat-raised-button color="primary" type="submit">Submit!</button>
+      </div>
+    </div>
+  </mat-card>
+</form>

@@ -1,0 +1,44 @@
+@keyframes example {
+    from {height: 0px;}
+    to {height: auto;}
+}
+
+.formCard{
+    margin-left: 24%;
+    margin-right: 24%; 
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.mat-card-title{
+    font-size: 16px;
+}
+
+.mdl-cell{
+    word-wrap: break-word;
+}
+
+.departmentSubjects{
+    margin-left: 16px;
+    margin-right: 16px;
+    background: lightcyan;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.mat-checkbox-label{
+    word-wrap: break-word;
+}
+
+.tutorFormSubmitButton{
+    margin-left: 32%;
+    margin-top: 24px;
+    width: 112px;
+}
+
+.sendCVButton{
+    margin-right: 32%;
+    margin-top: 24px;
+    width: 112px;
+    float: right;
+}
