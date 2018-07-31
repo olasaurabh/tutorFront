@@ -26,6 +26,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatIconModule} from '@angular/material/icon';
+import { TutorService } from '../services/tutor.service';
 ///////////////////////////////////////////////////////////////////////////////
 
 const appRoutes: Routes = [
@@ -69,7 +70,9 @@ const appRoutes: Routes = [
     MatIconModule
     ////////////////////////////////////////////////////
   ],
-  providers: [],
+  providers: [
+    TutorService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,12 +11,11 @@ export interface Tutor{
     currentSemester?: string;
     yearOfPassing?: number;
     cgpa?: number;
-    subject1?: string;
-    subject2?: string;
-    subject3?: string;
-    subject4?: string;
-    areaOfIntrestSubject?: string;
-    areaOfIntrestSoftware?: string;
+    softwareSubjects?: string;
+    mathsSubjects?: string;
+    otherSubjects?: string;
+    departmentSubjects?: string;
+    departmentOfIntrest?: string;
     whyDoYouWantToJoin?: string;
     query?: string;
     solution?: string;
