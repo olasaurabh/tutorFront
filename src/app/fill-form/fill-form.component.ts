@@ -15,8 +15,8 @@ export class FillFormComponent implements OnInit {
   tutorDetailsForm: FormGroup;
 
   genders: string[] = [
-    'Male',
-    'Female'
+    'M',
+    'F'
   ];
 
   softwareSubjects: string[] = [];
@@ -1024,7 +1024,7 @@ export class FillFormComponent implements OnInit {
     this.tutor.query = this.tutorDetailsForm.controls['query'].value;
     this.tutor.departmentOfIntrest = this.departmentControl.value;
     this.tutor.applicationStatus = 'CV Not Submitted';
-    this.tutor.dateApplied = new Date(Date.now());
+    this.tutor.dateApplied = Date.now();
     this.service.addTutor(this.tutor).then(data => {
       console.log(data);
     })

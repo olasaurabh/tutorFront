@@ -22,7 +22,7 @@ export interface Tutor{
     bankAccountNumber?: string;
     iFSCCode?: string;
     pANNumber?: string;
-    dateOfBirth?: Date;
+    dateOfBirth?: number;
     subjectAssigned?: string;
     availability?: string;
     applicationStatus?: string;
@@ -31,10 +31,10 @@ export interface Tutor{
     booksShared?: boolean;
     bankAdded?: string;
     tutorName?: string;
-    dateOfJoining?: Date;
-    dateTillWorked?: Date;
+    dateOfJoining?: number;
+    dateTillWorked?: number;
     cvSubmitted?: boolean;
-    dateApplied?: Date;
+    dateApplied?: number;
     numberOfCallsDone?: string;
     experience?: string;
     profilePic?: string;
