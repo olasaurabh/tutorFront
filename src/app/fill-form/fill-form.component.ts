@@ -21,7 +21,10 @@ export class FillFormComponent implements OnInit {
 
   softwareSubjects: string[] = [];
   mathsSubjects: string[] = [];
-  departmentSubjects: string[] = [];
+  civilSubjects: string[] = [];
+  chemicalSubjects: string[] = [];
+  electricalSubjects: string[] = [];
+  mechanicalSubjects: string[] = [];
   OtherSubjects: string[] = [];
 
   softwareSubjectsString: string = '';
@@ -503,486 +506,507 @@ export class FillFormComponent implements OnInit {
       } console.log(this.OtherSubjects);
     });
     this.tutorDetailsForm.controls['chemicalThermodynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Thermodynamics') } else {
-        var i = this.departmentSubjects.indexOf('Thermodynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Thermodynamics') } else {
+        var i = this.chemicalSubjects.indexOf('Thermodynamics')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalHeatTransfer'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Heat Transfer') } else {
-        var i = this.departmentSubjects.indexOf('Heat Transfer')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Heat Transfer') } else {
+        var i = this.chemicalSubjects.indexOf('Heat Transfer')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalFluidMechanics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Fluid Mechanics') } else {
-        var i = this.departmentSubjects.indexOf('Fluid Mechanics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Fluid Mechanics') } else {
+        var i = this.chemicalSubjects.indexOf('Fluid Mechanics')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalMaterialScienceEngineeringMaterials'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Material Science / Engineering Materials') } else {
-        var i = this.departmentSubjects.indexOf('Material Science / Engineering Materials')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Material Science / Engineering Materials') } else {
+        var i = this.chemicalSubjects.indexOf('Material Science / Engineering Materials')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Engineering Mechanics (Dynamics)') } else {
+        var i = this.chemicalSubjects.indexOf('Engineering Mechanics (Dynamics)')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalStatics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Engineering Mechanics (Statics)') } else {
+        var i = this.chemicalSubjects.indexOf('Engineering Mechanics (Statics)')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalStaticsDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
+        var i = this.chemicalSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['chemicalEngineeringFundamental'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Fundamental') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Fundamental')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.chemicalSubjects.push('Engineering Fundamental') } else {
+        var i = this.chemicalSubjects.indexOf('Engineering Fundamental')
+        this.chemicalSubjects.splice(i, 1);
+      } console.log(this.chemicalSubjects);
     });
     this.tutorDetailsForm.controls['civilEngineeringDrawing'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Drawing') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Drawing')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Engineering Drawing') } else {
+        var i = this.civilSubjects.indexOf('Engineering Drawing')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Engineering Mechanics (Dynamics)') } else {
+        var i = this.civilSubjects.indexOf('Engineering Mechanics (Dynamics)')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilStatics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Engineering Mechanics (Statics)') } else {
+        var i = this.civilSubjects.indexOf('Engineering Mechanics (Statics)')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilStaticsDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
+        var i = this.civilSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['EnvironmentalEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Environmental Engineering ') } else {
-        var i = this.departmentSubjects.indexOf('Environmental Engineering ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Environmental Engineering ') } else {
+        var i = this.civilSubjects.indexOf('Environmental Engineering ')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilFluidMechanics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Fluid Mechanics') } else {
-        var i = this.departmentSubjects.indexOf('Fluid Mechanics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Fluid Mechanics') } else {
+        var i = this.civilSubjects.indexOf('Fluid Mechanics')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['GeotechnicalEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Geotechnical Engineering ') } else {
-        var i = this.departmentSubjects.indexOf('Geotechnical Engineering ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Geotechnical Engineering ') } else {
+        var i = this.civilSubjects.indexOf('Geotechnical Engineering ')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['HydraulicEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Hydraulic Engineering') } else {
-        var i = this.departmentSubjects.indexOf('Hydraulic Engineering')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Hydraulic Engineering') } else {
+        var i = this.civilSubjects.indexOf('Hydraulic Engineering')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['IntroductiontoCivilEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Introduction to Civil Engineering') } else {
-        var i = this.departmentSubjects.indexOf('Introduction to Civil Engineering')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Introduction to Civil Engineering') } else {
+        var i = this.civilSubjects.indexOf('Introduction to Civil Engineering')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilMOM'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Mechanics of Material (MOM / SOM / MOS)') } else {
-        var i = this.departmentSubjects.indexOf('Mechanics of Material (MOM / SOM / MOS)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Mechanics of Material (MOM / SOM / MOS)') } else {
+        var i = this.civilSubjects.indexOf('Mechanics of Material (MOM / SOM / MOS)')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['SoilMechanics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Soil Mechanics') } else {
-        var i = this.departmentSubjects.indexOf('Soil Mechanics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Soil Mechanics') } else {
+        var i = this.civilSubjects.indexOf('Soil Mechanics')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['StructuralAnalysis'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Structural Analysis ') } else {
-        var i = this.departmentSubjects.indexOf('Structural Analysis ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Structural Analysis ') } else {
+        var i = this.civilSubjects.indexOf('Structural Analysis ')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['Surveying'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Surveying ') } else {
-        var i = this.departmentSubjects.indexOf('Surveying ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Surveying ') } else {
+        var i = this.civilSubjects.indexOf('Surveying ')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['TransportationEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Transportation Engineering') } else {
-        var i = this.departmentSubjects.indexOf('Transportation Engineering')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Transportation Engineering') } else {
+        var i = this.civilSubjects.indexOf('Transportation Engineering')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['WaterResourcesEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Water Resources Engineering ') } else {
-        var i = this.departmentSubjects.indexOf('Water Resources Engineering ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Water Resources Engineering ') } else {
+        var i = this.civilSubjects.indexOf('Water Resources Engineering ')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilEngineeringFundamental'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Fundamental') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Fundamental')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Engineering Fundamental') } else {
+        var i = this.civilSubjects.indexOf('Engineering Fundamental')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['civilThermodynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Thermodynamics') } else {
-        var i = this.departmentSubjects.indexOf('Thermodynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.civilSubjects.push('Thermodynamics') } else {
+        var i = this.civilSubjects.indexOf('Thermodynamics')
+        this.civilSubjects.splice(i, 1);
+      } console.log(this.civilSubjects);
     });
     this.tutorDetailsForm.controls['IntroductiontoElectricalEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Introduction to Electrical Engineering') } else {
-        var i = this.departmentSubjects.indexOf('Introduction to Electrical Engineering')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Introduction to Electrical Engineering') } else {
+        var i = this.electricalSubjects.indexOf('Introduction to Electrical Engineering')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalRobotics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Robotics') } else {
-        var i = this.departmentSubjects.indexOf('Robotics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Robotics') } else {
+        var i = this.electricalSubjects.indexOf('Robotics')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalMeasurementsandInstrumentation'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Measurements and Instrumentation ') } else {
-        var i = this.departmentSubjects.indexOf('Measurements and Instrumentation ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Measurements and Instrumentation ') } else {
+        var i = this.electricalSubjects.indexOf('Measurements and Instrumentation ')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['SignalsSystemsMatlab'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Signals & Systems + Matlab') } else {
-        var i = this.departmentSubjects.indexOf('Signals & Systems + Matlab')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Signals & Systems + Matlab') } else {
+        var i = this.electricalSubjects.indexOf('Signals & Systems + Matlab')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['ElectricalCircuitsNetworks'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Electrical Circuits & Networks') } else {
-        var i = this.departmentSubjects.indexOf('Electrical Circuits & Networks')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Electrical Circuits & Networks') } else {
+        var i = this.electricalSubjects.indexOf('Electrical Circuits & Networks')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['LogicDesignDigitalSystemDesign'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Logic Design / Digital System Design') } else {
-        var i = this.departmentSubjects.indexOf('Logic Design / Digital System Design')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Logic Design / Digital System Design') } else {
+        var i = this.electricalSubjects.indexOf('Logic Design / Digital System Design')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['DigitalSignalProcessing'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Digital Signal Processing') } else {
-        var i = this.departmentSubjects.indexOf('Digital Signal Processing')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Digital Signal Processing') } else {
+        var i = this.electricalSubjects.indexOf('Digital Signal Processing')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalControlSystems'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Control Systems') } else {
-        var i = this.departmentSubjects.indexOf('Control Systems')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Control Systems') } else {
+        var i = this.electricalSubjects.indexOf('Control Systems')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['MachineLearning'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Machine Learning') } else {
-        var i = this.departmentSubjects.indexOf('Machine Learning')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Machine Learning') } else {
+        var i = this.electricalSubjects.indexOf('Machine Learning')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalElectroMechanicalSystem'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Electro Mechanical System') } else {
-        var i = this.departmentSubjects.indexOf('Electro Mechanical System')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Electro Mechanical System') } else {
+        var i = this.electricalSubjects.indexOf('Electro Mechanical System')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['PowerSystems'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Power Systems') } else {
-        var i = this.departmentSubjects.indexOf('Power Systems')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Power Systems') } else {
+        var i = this.electricalSubjects.indexOf('Power Systems')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalThermodynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Thermodynamics') } else {
-        var i = this.departmentSubjects.indexOf('Thermodynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Thermodynamics') } else {
+        var i = this.electricalSubjects.indexOf('Thermodynamics')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Engineering Mechanics (Dynamics)') } else {
+        var i = this.electricalSubjects.indexOf('Engineering Mechanics (Dynamics)')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalStatics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Engineering Mechanics (Statics)') } else {
+        var i = this.electricalSubjects.indexOf('Engineering Mechanics (Statics)')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalStaticsDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
+        var i = this.electricalSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalMechatronics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Mechatronics') } else {
-        var i = this.departmentSubjects.indexOf('Mechatronics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Mechatronics') } else {
+        var i = this.electricalSubjects.indexOf('Mechatronics')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['electricalEngineeringFundamental'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Fundamental') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Fundamental')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.electricalSubjects.push('Engineering Fundamental') } else {
+        var i = this.electricalSubjects.indexOf('Engineering Fundamental')
+        this.electricalSubjects.splice(i, 1);
+      } console.log(this.electricalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalStatics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Engineering Mechanics (Statics)') } else {
+        var i = this.mechanicalSubjects.indexOf('Engineering Mechanics (Statics)')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Engineering Mechanics (Dynamics)') } else {
+        var i = this.mechanicalSubjects.indexOf('Engineering Mechanics (Dynamics)')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalStaticsDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Engineering Mechanics (Statics+Dynamics)') } else {
+        var i = this.mechanicalSubjects.indexOf('Engineering Mechanics (Statics+Dynamics)')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalFluidMechanics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Fluid Mechanics') } else {
-        var i = this.departmentSubjects.indexOf('Fluid Mechanics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Fluid Mechanics') } else {
+        var i = this.mechanicalSubjects.indexOf('Fluid Mechanics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalMaterialScienceEngineeringMaterials'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Material Science / Engineering Materials') } else {
-        var i = this.departmentSubjects.indexOf('Material Science / Engineering Materials')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Material Science / Engineering Materials') } else {
+        var i = this.mechanicalSubjects.indexOf('Material Science / Engineering Materials')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['KinematicsofMachineryDynamicsofMachine'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Kinematics of Machinery / Dynamics of Machine') } else {
-        var i = this.departmentSubjects.indexOf('Kinematics of Machinery / Dynamics of Machine')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Kinematics of Machinery / Dynamics of Machine') } else {
+        var i = this.mechanicalSubjects.indexOf('Kinematics of Machinery / Dynamics of Machine')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalThermodynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Thermodynamics') } else {
-        var i = this.departmentSubjects.indexOf('Thermodynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Thermodynamics') } else {
+        var i = this.mechanicalSubjects.indexOf('Thermodynamics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['ManufacturingScienceProcess'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Manufacturing Science / Process') } else {
-        var i = this.departmentSubjects.indexOf('Manufacturing Science / Process')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Manufacturing Science / Process') } else {
+        var i = this.mechanicalSubjects.indexOf('Manufacturing Science / Process')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalEngineeringDrawing'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Drawing') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Drawing')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Engineering Drawing') } else {
+        var i = this.mechanicalSubjects.indexOf('Engineering Drawing')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalMOM'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Mechanics of Material(MOM / SOM / MOS)') } else {
-        var i = this.departmentSubjects.indexOf('Mechanics of Material(MOM / SOM / MOS)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Mechanics of Material(MOM / SOM / MOS)') } else {
+        var i = this.mechanicalSubjects.indexOf('Mechanics of Material(MOM / SOM / MOS)')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalMeasurementsandInstrumentation'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Measurements and Instrumentation ') } else {
-        var i = this.departmentSubjects.indexOf('Measurements and Instrumentation ')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Measurements and Instrumentation ') } else {
+        var i = this.mechanicalSubjects.indexOf('Measurements and Instrumentation ')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['MachineDesign'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Machine Design') } else {
-        var i = this.departmentSubjects.indexOf('Machine Design')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Machine Design') } else {
+        var i = this.mechanicalSubjects.indexOf('Machine Design')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['HeatTransfer'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Heat Transfer') } else {
-        var i = this.departmentSubjects.indexOf('Heat Transfer')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Heat Transfer') } else {
+        var i = this.mechanicalSubjects.indexOf('Heat Transfer')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['DesignofMachineElements'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Design of Machine Elements (DOME)') } else {
-        var i = this.departmentSubjects.indexOf('Design of Machine Elements (DOME)')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Design of Machine Elements (DOME)') } else {
+        var i = this.mechanicalSubjects.indexOf('Design of Machine Elements (DOME)')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalControlSystems'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Control Systems') } else {
-        var i = this.departmentSubjects.indexOf('Control Systems')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Control Systems') } else {
+        var i = this.mechanicalSubjects.indexOf('Control Systems')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['ThermoFluids'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Thermo-Fluids') } else {
-        var i = this.departmentSubjects.indexOf('Thermo-Fluids')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Thermo-Fluids') } else {
+        var i = this.mechanicalSubjects.indexOf('Thermo-Fluids')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['Vibrations'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Vibrations') } else {
-        var i = this.departmentSubjects.indexOf('Vibrations')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Vibrations') } else {
+        var i = this.mechanicalSubjects.indexOf('Vibrations')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['SystemDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('System Dynamics') } else {
-        var i = this.departmentSubjects.indexOf('System Dynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('System Dynamics') } else {
+        var i = this.mechanicalSubjects.indexOf('System Dynamics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['ThermalDesign'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Thermal Design') } else {
-        var i = this.departmentSubjects.indexOf('Thermal Design')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Thermal Design') } else {
+        var i = this.mechanicalSubjects.indexOf('Thermal Design')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['VehicleDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Vehicle Dynamics') } else {
-        var i = this.departmentSubjects.indexOf('Vehicle Dynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Vehicle Dynamics') } else {
+        var i = this.mechanicalSubjects.indexOf('Vehicle Dynamics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['TurboMachinery'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Turbo Machinery') } else {
-        var i = this.departmentSubjects.indexOf('Turbo Machinery')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Turbo Machinery') } else {
+        var i = this.mechanicalSubjects.indexOf('Turbo Machinery')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['AdvanceMachineDesign'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Advance Machine Design') } else {
-        var i = this.departmentSubjects.indexOf('Advance Machine Design')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Advance Machine Design') } else {
+        var i = this.mechanicalSubjects.indexOf('Advance Machine Design')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['ComputationalFluidDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Computational Fluid Dynamics') } else {
-        var i = this.departmentSubjects.indexOf('Computational Fluid Dynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Computational Fluid Dynamics') } else {
+        var i = this.mechanicalSubjects.indexOf('Computational Fluid Dynamics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['EngineeringFundamental'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Engineering Fundamental') } else {
-        var i = this.departmentSubjects.indexOf('Engineering Fundamental')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Engineering Fundamental') } else {
+        var i = this.mechanicalSubjects.indexOf('Engineering Fundamental')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['AppliedFluidMechanics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Applied Fluid Mechanics') } else {
-        var i = this.departmentSubjects.indexOf('Applied Fluid Mechanics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Applied Fluid Mechanics') } else {
+        var i = this.mechanicalSubjects.indexOf('Applied Fluid Mechanics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['CompressibleFluidFlowGasDynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Compressible Fluid Flow / Gas Dynamics') } else {
-        var i = this.departmentSubjects.indexOf('Compressible Fluid Flow / Gas Dynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Compressible Fluid Flow / Gas Dynamics') } else {
+        var i = this.mechanicalSubjects.indexOf('Compressible Fluid Flow / Gas Dynamics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['IntroductiontoMechanicalEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Introduction to Mechanical Engineering') } else {
-        var i = this.departmentSubjects.indexOf('Introduction to Mechanical Engineering')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Introduction to Mechanical Engineering') } else {
+        var i = this.mechanicalSubjects.indexOf('Introduction to Mechanical Engineering')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['AppliedHeatTransfer'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Applied Heat Transfer') } else {
-        var i = this.departmentSubjects.indexOf('Applied Heat Transfer')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Applied Heat Transfer') } else {
+        var i = this.mechanicalSubjects.indexOf('Applied Heat Transfer')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['CompositeMaterial'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Composite Material') } else {
-        var i = this.departmentSubjects.indexOf('Composite Material')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Composite Material') } else {
+        var i = this.mechanicalSubjects.indexOf('Composite Material')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['IndustrialEngineering'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Industrial Engineering') } else {
-        var i = this.departmentSubjects.indexOf('Industrial Engineering')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Industrial Engineering') } else {
+        var i = this.mechanicalSubjects.indexOf('Industrial Engineering')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['AppliedThermodynamics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Applied Thermodynamics') } else {
-        var i = this.departmentSubjects.indexOf('Applied Thermodynamics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Applied Thermodynamics') } else {
+        var i = this.mechanicalSubjects.indexOf('Applied Thermodynamics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalRobotics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Robotics') } else {
-        var i = this.departmentSubjects.indexOf('Robotics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Robotics') } else {
+        var i = this.mechanicalSubjects.indexOf('Robotics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalElectroMechanicalSystem'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Electro Mechanical System') } else {
-        var i = this.departmentSubjects.indexOf('Electro Mechanical System')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Electro Mechanical System') } else {
+        var i = this.mechanicalSubjects.indexOf('Electro Mechanical System')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['FiniteElementAnalysis'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Finite Element Analysis') } else {
-        var i = this.departmentSubjects.indexOf('Finite Element Analysis')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Finite Element Analysis') } else {
+        var i = this.mechanicalSubjects.indexOf('Finite Element Analysis')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['mehanicalMechatronics'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Mechatronics') } else {
-        var i = this.departmentSubjects.indexOf('Mechatronics')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Mechatronics') } else {
+        var i = this.mechanicalSubjects.indexOf('Mechatronics')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
     this.tutorDetailsForm.controls['InternalCombustionEngine'].valueChanges.subscribe(data => {
-      if (data == true) { this.departmentSubjects.push('Internal Combustion (IC) Engine') } else {
-        var i = this.departmentSubjects.indexOf('Internal Combustion (IC) Engine')
-        this.departmentSubjects.splice(i, 1);
-      } console.log(this.departmentSubjects);
+      if (data == true) { this.mechanicalSubjects.push('Internal Combustion (IC) Engine') } else {
+        var i = this.mechanicalSubjects.indexOf('Internal Combustion (IC) Engine')
+        this.mechanicalSubjects.splice(i, 1);
+      } console.log(this.mechanicalSubjects);
     });
   }
 
   ngOnInit() {
     console.log(this.afAuth.user);
+    this.service.getTutor().subscribe(data => {
+      console.log(data);
+    });
   }
 
   onFormSubmit() {
 
     this.mathsSubjectsString = this.mathsSubjects.join(', ');
-    this.departmentSubjectsString = this.departmentSubjects.join(', ');
     this.OtherSubjectsString = this.OtherSubjects.join(', ');
     this.softwareSubjectsString = this.softwareSubjects.join(', ');
+
+    if (this.departmentControl.value == 'Civil Engineering') {
+      this.departmentSubjectsString = this.civilSubjects.join(', ');
+      this.tutor.departmentSubjects = this.departmentSubjectsString;
+    };
+    if (this.departmentControl.value == 'Chemical Engineering') {
+      this.departmentSubjectsString = this.chemicalSubjects.join(', ');
+      this.tutor.departmentSubjects = this.departmentSubjectsString;
+    };
+    if (this.departmentControl.value == 'Electrical & Electronics Engineering') {
+      this.departmentSubjectsString = this.electricalSubjects.join(', ');
+      this.tutor.departmentSubjects = this.departmentSubjectsString;
+    };
+    if (this.departmentControl.value == 'Mechanical Engineering') {
+      this.departmentSubjectsString = this.mechanicalSubjects.join(', ');
+      this.tutor.departmentSubjects = this.departmentSubjectsString;
+    };
+
     
+
     this.tutor.firstName = this.tutorDetailsForm.controls['firstName'].value;
     this.tutor.lastName = this.tutorDetailsForm.controls['lastName'].value;
     this.tutor.gender = this.tutorDetailsForm.controls['gender'].value;
@@ -998,10 +1022,12 @@ export class FillFormComponent implements OnInit {
     this.tutor.whyDoYouWantToJoin = this.tutorDetailsForm.controls['whyEduFeat'].value;
     this.tutor.experience = this.tutorDetailsForm.controls['experience'].value;
     this.tutor.query = this.tutorDetailsForm.controls['query'].value;
-
-this.service.addTutor(this.tutor).then(data=>{
-  console.log(data);
-})
+    this.tutor.departmentOfIntrest = this.departmentControl.value;
+    this.tutor.applicationStatus = 'CV Not Submitted';
+    this.tutor.dateApplied = new Date(Date.now());
+    this.service.addTutor(this.tutor).then(data => {
+      console.log(data);
+    })
 
   }
 

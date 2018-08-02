@@ -38,14 +38,14 @@
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--6-col">
           <mat-form-field class="width88">
-            <input matInput placeholder="Phone Number" formControlName="phoneNumber">
+            <input matInput placeholder="Phone Number" type="number" formControlName="phoneNumber">
           </mat-form-field>
         </div>
         <div class="mdl-cell mdl-cell--6-col">
 
 
           <mat-form-field class="width88">
-            <input matInput placeholder="Whatsapp Number" formControlName="whatsappNumber">
+            <input matInput placeholder="Whatsapp Number" type="number" formControlName="whatsappNumber">
             <button mat-button matSuffix mat-icon-button aria-label="Copy Phone Number" type="button" (click)="copyPhoneNumber()">
                 <mat-icon>file_copy</mat-icon>
               </button>
@@ -96,12 +96,14 @@
       <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--6-col">
           <mat-form-field class="width88">
-            <input matInput placeholder="Year of Passing" formControlName="yearOfPassing">
+            <input matInput placeholder="Year of Passing" type="number" formControlName="yearOfPassing">
+            <mat-hint align="start">Ex: 2020</mat-hint>
           </mat-form-field>
         </div>
         <div class="mdl-cell mdl-cell--6-col">
           <mat-form-field class="width88">
-            <input matInput placeholder="CGPA/ Percentage Aggregate" formControlName="cgpa">
+            <input matInput placeholder="CGPA/ Percentage Aggregate" type="number" formControlName="cgpa">
+            <mat-hint align="start">Ex: 8.5/ 85</mat-hint>
           </mat-form-field>
         </div>
       </div>

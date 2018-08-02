@@ -29,7 +29,7 @@ export interface Tutor{
     rejectedReason?: string;
     feedbackForAssignment?: string;
     booksShared?: boolean;
-    bankAdded?: boolean;
+    bankAdded?: string;
     tutorName?: string;
     dateOfJoining?: Date;
     dateTillWorked?: Date;
@@ -39,4 +39,6 @@ export interface Tutor{
     experience?: string;
     profilePic?: string;
     degree?: string;
+    initialRating?: number;
+    groupCreated?: boolean;
 }
